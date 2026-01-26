@@ -1,148 +1,123 @@
 # Tasca-S1.04.-Testing
-📄 Description - Exercise Statement
-Restaurant Management Exercise with Java
 
-Implement a system that manages a set of restaurants using a HashSet to avoid duplicates. The exercise demonstrates:
-
-Use of Java collections (HashSet, ArrayList)
-
-Proper implementation of equals() and hashCode() methods
-
-Object sorting using lambdas
-
-Iteration with for-each
-
-Statement:
-Create an application that:
-
-Stores restaurants in a HashSet to avoid duplicates
-
-Converts the HashSet to ArrayList for sorting
-
-Sorts restaurants by descending rating
-
-Displays the final result
+📄 Description 
+- 
+- Exercise Statement
+This project consists of implementing a book management system for a library with unit tests using JUnit 5. The system allows managing a book collection while ensuring automatic alphabetical ordering and duplicate prevention.
 
 💻 Technologies Used
-Java 8+ - Programming language
+- 
 
-Java Collections Framework - HashSet, ArrayList
+Java 17
 
-Object-Oriented Programming - Classes, methods, encapsulation
+JUnit 5
 
-Lambda Expressions - For custom sorting
+Maven
+
+IntelliJ IDEA (optional)
 
 📋 Requirements
-Software Requirements:
+-
+Java JDK 17 or higher
 
-Java Development Kit (JDK) 8 or higher
+Apache Maven 3.8+
 
-Any Java IDE (IntelliJ IDEA, Eclipse, VS Code) or text editor
+JUnit 5.9.2
 
-Command Line Interface (optional)
-
-Project Dependencies:
-
-No external libraries required
-
-Uses only standard Java SE libraries
+Operating System: Windows 10/11, macOS 10.14+, or Linux Ubuntu 18.04+
 
 🛠️ Installation
-Step-by-step installation guide:
-
-Clone or download the project:
-
-bash
-git clone <repository-url>
-Or download the ZIP file and extract it
-
-Navigate to project directory:
+-
+Clone this repository:
 
 bash
-cd restaurant-management
-Verify Java installation:
+git clone https://github.com/your-username/library-testing.git
+Access the project directory:
 
 bash
-java -version
-javac -version
-Compile the Java files:
+cd library-testing
+Install dependencies:
 
 bash
-javac *.java
+mvn clean install
+Configure the project in IntelliJ IDEA:
+
+Open the project
+
+Configure JDK 17
+
+Mark src/test/java as Test Sources Root
+
 ▶️ Execution
-Running the application:
-
-Method 1: Using Command Line
+-
+Compile the project:
 
 bash
-java Main
-Method 2: Using an IDE
+mvn clean compile
+Run tests:
 
-Open the project in your preferred IDE
+bash
+mvn test
+Run specific test:
 
-Locate the Main.java file
+bash
+mvn test -Dtest=BibliotecaTest
+Run from IntelliJ IDEA:
 
-Run the main method
+Open BibliotecaTest.java
 
-Expected Output:
+Click the ▶️ button next to each test
 
-text
-Can Punyetes - Score: 9
-El sazón - Score: 8
-El Pendejo - Score: 8
-Oishi - Score: 7
-El sazón - Score: 5
+Or press Ctrl+Shift+F10 (Windows/Linux) / Ctrl+Shift+R (macOS)
+
 🌐 Deployment
-For production deployment:
-
-Create JAR file:
-
-bash
-jar cfe restaurant-app.jar Main *.class
-Deploy the JAR:
+-
+Prepare production environment:
 
 bash
-java -jar restaurant-app.jar
-Docker deployment (optional):
+mvn clean package -DskipTests
+Run tests in integration mode:
 
-dockerfile
-FROM openjdk:11-jre-slim
-COPY . /app
-WORKDIR /app
-CMD ["java", "Main"]
+bash
+mvn verify
+Generate coverage report:
+
+bash
+mvn jacoco:report
+For continuous integration:
+
+bash
+# Configuration for GitHub Actions
+-
+mvn test -DskipTests=false
 🤝 Contributions
-Guidelines for contributing:
+Contributions are welcome! Please follow these steps to contribute:
 
 Fork the repository
 
-Create a feature branch:
+Create a new branch:
 
 bash
-git checkout -b feature/new-feature
-Follow code style:
+git checkout -b feature/NewFeature
+Make your changes and commit them:
 
-Use meaningful variable names
+bash
+git add .
+git commit -m 'Add New Feature'
+Push changes to your branch:
 
-Include comments for complex logic
+bash
+git push origin feature/NewFeature
+Create a pull request
 
-Maintain proper indentation
+Contribution Guidelines:
+-
+Follow existing code style
 
-Testing:
+Write tests for new features
 
-Ensure all functionality works
+Ensure all tests pass
 
-Test edge cases
+Update documentation if necessary
 
-Verify no duplicates in HashSet
-
-Submit pull request with clear description of changes
-
-Code Standards:
-
-Use English for variable names and comments
-
-Follow Java naming conventions
-
-Implement proper equals() and hashCode() for custom classes
-
-Handle exceptions appropriately
+Use descriptive names for variables and methods
