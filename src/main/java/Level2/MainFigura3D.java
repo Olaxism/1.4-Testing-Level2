@@ -1,4 +1,4 @@
-package Level2.exercise1;
+package Level2;
 
 public class MainFigura3D {
 

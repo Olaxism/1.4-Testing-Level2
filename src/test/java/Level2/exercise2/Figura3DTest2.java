@@ -1,6 +1,6 @@
 package Level2.exercise2;
 
-import Level2.exercise1.Figura3D;
+import Level2.Figura3D;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
